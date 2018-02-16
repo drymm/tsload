@@ -9,7 +9,7 @@ TABLENAME=`basename ${FILENAME} .csv`
 }
 
 function format {
-case ${TABLENAME} in Dim.SectionDetail) DATEFORMAT="%Y-%m-%d %H:%M:%S";;
+case ${TABLENAME} in yourtablename) DATEFORMAT="%Y-%m-%d %H:%M:%S";;
                      *)                 DATEFORMAT="%Y%m%d";;
 esac
 }
