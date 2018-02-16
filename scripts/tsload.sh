@@ -1,6 +1,7 @@
 #!/bin/bash
 
-DATABASE=QBE
+DATABASE=
+FILEPATH=
 FILENAME=$1
 
 function tablename {
@@ -17,7 +18,7 @@ function load {
 LOGFILE=logs/${TABLENAME}.log
 tsload --target_database ${DATABASE} \
        --target_table $TABLENAME \
-       --source_file /home/admin/QBE/$FILENAME \
+       --source_file ${FILEPATH}/${FILENAME} \
        --has_header_row \
        --empty_target \
        --date_format "${DATEFORMAT}" \
